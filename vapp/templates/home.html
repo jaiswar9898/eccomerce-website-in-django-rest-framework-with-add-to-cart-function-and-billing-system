@@ -1,0 +1,49 @@
+<div class="row"> 
+            {% for product in product_objects%}
+            <div class="col-md-3">
+                <div class="card">
+                
+                    <div class="card-body">
+                        <h3 id="nm{{ product.id }}" class="card-title_">{{ product.category }}</h3>
+
+                        <h5 class="card-title">{{ product.product_name }}</h5>
+
+                        <img src=0"{{ product.image }}" style="height:250px; width:250px;  margin-left: auto;
+                    margin-right: auto;">
+              
+                      
+
+                        
+
+                        <h5 style="color:green;" id="price{{ product.id }}">{{ product.price }}</h5>
+
+                        <h5>Description<span style="color:red;" >{{ product.description }}$</span></h5>
+
+                        <h5 style="color:green;" id="price{{ product.id }}">{{ product.stock }}</h5>
+
+                        <h5 style="color:green;" id="price{{ product.id }}">{{ product.quantity_type }}</h5>
+
+                        <h5 style="color:green;" id="price{{ product.id }}">{{ product.color_type }}</h5>
+
+                        <h5 style="color:green;" id="price{{ product.id }}">{{ product.size_type }}</h5>
+
+
+
+
+     
+                        <div class="row" style=" margin: auto;">
+
+                            <div class="col-md-3">
+                                <a href="{{product.id}}" class="btn btn-warning" style="background color:green;">View</a>
+                            </div>
+
+                           
+                        </div>  
+                    </div>
+                    
+                </div>
+                <br>
+            </div>
+            {% endfor %}
+
+
